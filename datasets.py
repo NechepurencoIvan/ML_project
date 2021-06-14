@@ -4,6 +4,11 @@ from torch.utils.data import Dataset
 import re
 import torch
 
+import pickle
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
 class SeismogramDataset(Dataset):
     """
     Seismogram dataset.
