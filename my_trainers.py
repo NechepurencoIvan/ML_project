@@ -3,13 +3,6 @@ from segmentation_models_pytorch.encoders import get_preprocessing_fn
 import torch
 from torch import nn
 
-def IOU_loss(output, target):
-  proba = torch.nn.Softmax()(output)[:,1]
-  pred = proba >= 0.5
-  #print(output.shape, proba.shape, pred.shape, target.shape)
-  loss = torch.sum(pred * target) / torch.sum((pred + target) > 0) #torch.mean((output - target)**2)
-  return loss 
-
 class MyTrainer:
     def __init__(self,
                  model: torch.nn.Module,
