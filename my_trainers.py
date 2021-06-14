@@ -1,3 +1,6 @@
+import numpy as np
+import torch
+
 class MyTrainer:
     def __init__(self,
                  model: torch.nn.Module,
