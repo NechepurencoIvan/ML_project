@@ -2,6 +2,7 @@ import os
 from numpy.fft import fft2, fftshift, ifftshift
 from torch.utils.data import Dataset
 import re
+import torch
 
 class SeismogramDataset(Dataset):
     """
