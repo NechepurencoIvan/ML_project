@@ -1,8 +1,3 @@
-import segmentation_models_pytorch as smp
-from segmentation_models_pytorch.encoders import get_preprocessing_fn
-import torch
-from torch import nn
-
 class MyTrainer:
     def __init__(self,
                  model: torch.nn.Module,
